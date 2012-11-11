@@ -1,0 +1,26 @@
+
+= @user.username
+t('portal.bandmaster_band')
+%br
+- if @band_masters.blank?
+	t('portal.no_bandmaster_band')
+- else
+	- @band_masters.each do |band_master|
+		= band_master.band.name %>
+		%br
+
+= link_to t('button_and_link.register_band'), new_bands_band_path 
+%br
+%br
+t('portal.bandmember_band)
+%br
+- if @band_members.blank?
+	t('portal.no_bandmember_band')
+	%br
+- else
+	- @band_members.each do |band_member|
+		= band_member.band.name
+		%br
+
+
+

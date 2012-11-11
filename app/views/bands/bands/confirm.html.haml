@@ -1,0 +1,12 @@
+
+t('bands.bands.confirm')
+= form_tag bands_bands_path, :method => 'post' do 
+	t('bands.bands.band_name') = @band.name
+	%br
+	= hidden_field_tag :name, @band.name
+	t('bands.bands.explanation')
+	= @band.explanation
+	= hidden_field_tag :explanation, @band.explanation
+	= submit_tag t('button_and_link.register')
+
+= button_to t('button_and_link.back'), new_bands_band_path, :method => 'get'

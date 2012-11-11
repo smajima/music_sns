@@ -1,0 +1,18 @@
+= t('top.bandmaster_register')
+
+%br
+- if @errors.presence
+	#errors= @errors.inspect
+
+= form_tag bandmaster_top_index_path do
+	= t('top.user_name')
+	= text_field_tag :username, session[:username]
+	%br
+	= t('top.email_pc')
+	= text_field_tag :e_mail, session[:e_mail]
+	%br
+	= t('top.email_pc_confirm')
+	= text_field_tag :e_mail_confirmation, session[:e_mail_confirmation]
+	= hidden_field_tag :password, "temporary"
+= submit_tag t('button_and_link.register')
+

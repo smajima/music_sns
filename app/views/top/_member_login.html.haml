@@ -1,0 +1,13 @@
+= t('top.bandmember_login')
+- if @login_errors.presence 
+	#errors=@login_errors.inspect
+
+= form_tag member_login_top_index_path do
+	= t('top.user_name')
+	= text_field_tag :username, session[:username_m]
+	%br
+	= t('top.password')
+	= password_field_tag :password
+	%br
+	= submit_tag t('button_and_link.login')
+%br

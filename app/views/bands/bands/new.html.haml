@@ -1,0 +1,15 @@
+
+t('bands.bands.create_band')
+%br
+= @errors unless @errors.blank? 
+= form_tag confirm_bands_bands_path, :method => 'get' do 
+	%p
+  		t('bands.bands.band_name')
+  		= text_field_tag :name, session[:name]
+
+  	%p
+  		t('bads.bands.explanation')
+  		= text_area_tag :explanation, session[:explanation] 
+
+= submit_tag t('button_and_link.register')
+
