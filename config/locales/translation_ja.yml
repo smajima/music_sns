@@ -1,0 +1,85 @@
+ja:
+  activerecord:
+    models:
+      album: アルバム  #g
+      band: バンド  #g
+      band_master: 軍楽隊長  #g
+      band_member: バンドのメンバー  #g
+      blog: ブログ  #g
+      bulettin_board: Bulettin板  #g
+      member_bulettin_borad: メンバーのbulettinのborad  #g
+      member_post: メンバーのポスト  #g
+      photo: 写真  #g
+      post: ポスト  #g
+      profile: プロフィール  #g
+      user: ユーザー  #g
+
+    attributes:
+      album:
+        explanation: 説明  #g
+        photos: 写真  #g
+        title: タイトル  #g
+
+      band:
+        album: :activerecord.models.album  #g
+        band_master: :activerecord.models.band_master  #g
+        band_members: バンドのメンバー  #g
+        blog: :activerecord.models.blog  #g
+        bulletin_board: :activerecord.models.bulletin_board  #g
+        explanation: 説明  #g
+        member_bulettin_board: :activerecord.models.member_bulettin_board  #g
+        name: 名前  #g
+
+      band_master:
+        profile: :activerecord.models.profile  #g
+        user: :activerecord.models.user  #g
+
+      band_member:
+        band: :activerecord.models.band  #g
+        profile: :activerecord.models.profile  #g
+        user: :activerecord.models.user  #g
+
+      blog:
+        band: :activerecord.models.band  #g
+        contents: 目次  #g
+        title: タイトル  #g
+
+      bulettin_board:
+        name: 名前  #g
+        posts: ポスト  #g
+
+      member_bulettin_borad:
+        member_posts: メンバーのポスト  #g
+        name: 名前  #g
+
+      member_post:
+        contents: 目次  #g
+        member_bulettin_board: :activerecord.models.member_bulettin_board  #g
+        title: タイトル  #g
+
+      photo:
+        album: :activerecord.models.album  #g
+        explanation: 説明  #g
+        file_name: ファイル名  #g
+        title: タイトル  #g
+
+      post:
+        bulettin_board: :activerecord.models.bulettin_board  #g
+        contents: 目次  #g
+        title: タイトル  #g
+
+      profile:
+        birthday: 誕生日  #g
+        gender: 性  #g
+        introduction: 導入  #g
+        nick_name: ニックの名前  #g
+        prof: :activerecord.models.prof  #g
+        prof_type: 教授のタイプ  #g
+
+      user:
+        band_masters: 軍楽隊長  #g
+        band_members: バンドのメンバー  #g
+        e_mail: E郵便  #g
+        password: パスワード  #g
+        status: 状態  #g
+        username: ユーザー名  #g

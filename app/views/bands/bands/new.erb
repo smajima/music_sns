@@ -1,0 +1,18 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+バンド作成</br>
+<%= @errors unless @errors.blank? %>
+<%=form_tag confirm_bands_bands_path, :method => 'get' do %>
+<p>
+  バンド名
+  <%= text_field_tag :name, session[:name]%>
+</p>
+<p>
+  説明
+  <%= text_area_tag :explanation, session[:explanation] %>
+</p>
+<%= submit_tag '確認' %>
+<% end %>

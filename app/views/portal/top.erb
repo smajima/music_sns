@@ -1,0 +1,25 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<%= @user.username %>
+バンドマスターになっているバンド</br>
+<% if @band_masters.blank? %>
+バンドマスターになっているバンドはありません</br>
+<% else %>
+<% @band_masters.each { |band_master| %>
+<%= band_master.band.name %></br>
+<% } %>
+<% end %>
+<%= link_to 'バンド登録', new_bands_band_path  %>
+</br></br>
+バンドメンバーになっているバンド</br>
+<% if @band_members.blank? %>
+バンドメンバーになっているバンドはありません</br>
+<% else %>
+<% @band_members.each { |band_member| %>
+<%= band_member.band.name %></br>
+<% } %>
+<% end %>
+

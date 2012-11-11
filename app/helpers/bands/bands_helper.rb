@@ -1,0 +1,2 @@
+module Bands::BandsHelper
+end

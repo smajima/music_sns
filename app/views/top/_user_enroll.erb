@@ -1,0 +1,15 @@
+<%#
+# バンドマスター登録用
+%>
+
+バンドマスター登録</br>
+<% if @errors.presence %>
+<div class="errors"><%= @errors.inspect %></div>
+<% end %>
+<%= form_tag bandmaster_top_index_path do %>
+ユーザー名<%= text_field_tag :username, session[:username] %></br>
+E-Mail(PC)<%= text_field_tag :e_mail, session[:e_mail] %></br>
+E-Mail(PC)確認<%= text_field_tag :e_mail_confirmation, session[:e_mail_confirmation] %></br>
+<%= hidden_field_tag :password, "temporary" %>
+<%= submit_tag '登録'%>
+<% end %>

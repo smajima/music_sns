@@ -1,0 +1,13 @@
+<%#
+# バンドメンバーログイン
+%>
+
+バンドメンバーログイン</br>
+<% if @login_errors.presence %>
+<div class="errors"><%= @login_errors.inspect %></div>
+<% end %>
+<%= form_tag member_login_top_index_path do %>
+ユーザー名<%= text_field_tag :username, session[:username_m] %></br>
+パスワード<%= password_field_tag :password %></br>
+<%= submit_tag 'ログイン'%>
+<% end %>

@@ -1,0 +1,14 @@
+<%#
+# To change this template, choose Tools | Templates
+%>
+本登録です。パスワードを設定してください</br>
+<%= @errors.inspect %></br>
+ユーザー名:<%= params[:username] %>
+<%= form_tag 'update', :method => :put do %>
+<%= hidden_field_tag :username, params[:username] %>
+パスワード<%= password_field_tag :password %></br>
+パスワード確認<%= password_field_tag :password_confirmation %></br>
+<%= submit_tag "登録" %>
+<% end %>
+
+

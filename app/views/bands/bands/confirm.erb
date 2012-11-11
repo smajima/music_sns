@@ -1,0 +1,15 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+以下の内容で良いですか</br>
+<%= form_tag bands_bands_path, :method => 'post' do   %>
+バンド名：<%= @band.name %></br>
+<%= hidden_field_tag :name, @band.name %>
+バンド説明</br>
+<%= @band.explanation %>
+<%= hidden_field_tag :explanation, @band.explanation %>
+<%= submit_tag '登録' %>
+<% end %>
+<%= button_to '戻る', new_bands_band_path, :method => 'get' %>

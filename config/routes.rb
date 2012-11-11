@@ -45,11 +45,31 @@ MusicSns::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  namespace :bands do
+    resources :bands do
+      get 'band_search', :on => :collection
+      get 'confirm', :on => :collection
+    end
+  end
 
+  namespace :users do
+    resources :users do
+      get 'band_master', :on => :collection
+    end
+  end
+  resources :top do
+    post 'bandmaster', :on => :collection
+    post 'member_login', :on => :collection
+  end
+  
+  resources :portal do
+    get 'top', :on => :collection
+  end
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => 'welcome#index'
-
+  root :to => 'top#top'
+  
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
